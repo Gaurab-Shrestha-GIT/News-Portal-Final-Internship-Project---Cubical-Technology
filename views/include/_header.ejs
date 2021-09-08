@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Big Online News Admin Dashboard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- Font Awesome CSS -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+    />
+
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+    />
+    <!-- Google Icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Datatable CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css
+"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.11.1/css/dataTables.bootstrap5.min.css"
+    />
+
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/admin.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+      integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!--Main Navigation-->
+    <header>
+      <!-- Sidebar -->
+      <nav
+        id="sidebarMenu"
+        class="collapse d-lg-block sidebar collapse bg-white overflow-auto"
+      >
+        <div class="position-sticky accordion" id="accordionExample">
+          <div class="list-group list-group-flush mx-3 mt-4">
+            <div class="accordion-item">
+              <a
+                href="/"
+                class="
+                  menuButton
+                  list-group-item list-group-item-action
+                  ripple
+                  bg-primary
+                "
+              >
+                <i class="fas fa-chart-line fa-fw me-3 text-light"></i
+                ><span class="text-light">Dashboard</span>
+              </a>
+            </div>
+
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header bg-primary" id="headingOne">
+                  <button
+                    class="accordion-button text-light"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    <i class="fas fa-newspaper fa-fw me-3 text-light"></i>
+                    News
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#mainMenu"
+                >
+                  <div class="accordion-item">
+                    <a
+                      href="/all-news"
+                      class="
+                        menuButton
+                        list-group-item list-group-item-action
+                        ripple
+                      "
+                    >
+                      <i class="fas fa-newspaper fa-fw me-3"></i
+                      ><span>All News</span>
+                    </a>
+                  </div>
+                  <div class="accordion-item">
+                    <a
+                      href="/add-news-category"
+                      class="
+                        menuButton
+                        list-group-item list-group-item-action
+                        ripple
+                      "
+                    >
+                      <i class="fas fa-book-open fa-fw me-3"></i
+                      ><span>Add Category</span>
+                    </a>
+                  </div>
+
+                  <div class="accordion-item">
+                    <a
+                      href="/add-news"
+                      class="
+                        menuButton
+                        list-group-item list-group-item-action
+                        ripple
+                      "
+                    >
+                      <i class="fas fa-newspaper fa-fw me-3"></i
+                      ><span>Add News</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header bg-primary" id="headingOne">
+                  <button
+                    class="accordion-button text-light"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseVideos"
+                    aria-expanded="true"
+                    aria-controls="collapseVideos"
+                  >
+                    <i class="fas fa-video fa-fw me-3 text-light"></i>
+                    Videos
+                  </button>
+                </h2>
+                <div
+                  id="collapseVideos"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#subMenu"
+                >
+                  <div class="accordion-item">
+                    <a
+                      href="/all-videos"
+                      class="
+                        menuButton
+                        list-group-item list-group-item-action
+                        ripple
+                      "
+                    >
+                      <i class="fas fa-video fa-fw me-3"></i
+                      ><span>All Videos</span>
+                    </a>
+                  </div>
+                  <div class="accordion-item">
+                    <a
+                      href="/add-videos-category"
+                      class="
+                        menuButton
+                        list-group-item list-group-item-action
+                        ripple
+                      "
+                    >
+                      <i class="fas fa-file-video fa-fw me-3"></i
+                      ><span>Add Category</span>
+                    </a>
+                  </div>
+                  <div class="accordion-item">
+                    <a
+                      href="/add-videos"
+                      class="
+                        menuButton
+                        list-group-item list-group-item-action
+                        ripple
+                      "
+                    >
+                      <i class="fas fa-video fa-fw me-3"></i
+                      ><span>Add Videos</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <a
+                href="/admin-profile"
+                class="
+                  menuButton
+                  list-group-item list-group-item-action
+                  ripple
+                  bg-primary
+                "
+                ><i class="fas fa-user fa-fw me-3 text-light"></i
+                ><span class="text-light">My Account</span></a
+              >
+            </div>
+
+            <div class="accordion-item">
+              <a
+                href="/manage-user-details"
+                class="
+                  menuButton
+                  list-group-item list-group-item-action
+                  ripple
+                  bg-primary
+                "
+                ><i class="fas fa-user-friends fa-fw me-3 text-light"></i
+                ><span class="text-light">Manage User</span></a
+              >
+            </div>
+
+            <div class="accordion-item">
+              <a
+                href="#"
+                class="
+                  menuButton
+                  list-group-item list-group-item-action
+                  ripple
+                  bg-primary
+                "
+              >
+                <i class="fas fa-sign-out-alt fa-fw me-3 text-light"></i
+                ><span class="text-light">Logout</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- Sidebar -->
+
+      <!-- Navbar -->
+      <nav
+        id="main-navbar"
+        class="navbar navbar-expand-lg navbar-light bg-white fixed-top"
+      >
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+          <!-- Toggle button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#sidebarMenu"
+            aria-controls="sidebarMenu"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+
+          <!-- Brand -->
+          <a class="navbar-brand" href="#">
+            <img
+              src="./img/icon.png"
+              height="50"
+              width="65"
+              alt=""
+              loading="lazy"
+            />
+          </a>
+
+          <!-- Right links -->
+          <ul class="navbar-nav ms-auto d-flex flex-row">
+            <!-- Notification dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fas fa-bell"></i>
+                <span class="badge rounded-pill badge-notification bg-danger"
+                  >4</span
+                >
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li><a class="dropdown-item" href="#">Some news</a></li>
+                <li><a class="dropdown-item" href="#">Another news</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else</a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Avatar -->
+            <li class="nav-item dropdown">
+              <a
+                class="
+                  nav-link
+                  dropdown-toggle
+                  hidden-arrow
+                  d-flex
+                  align-items-center
+                "
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="material-icons"
+                  ><span class="material-icons-outlined">
+                    admin_panel_settings
+                  </span></i
+                >
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li>
+                  <a class="dropdown-item" href="/admin-profile">My profile</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Edit Profile</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- Container wrapper -->
+      </nav>
+      <!-- Navbar -->
+    </header>
+    <!--Main Navigation-->
+  </body>
+</html>

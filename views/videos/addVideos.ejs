@@ -1,0 +1,83 @@
+<!-- Include Header -->
+<%- include('../include/_header')%>
+<!-- Include Header -->
+
+<!--Main layout-->
+<main style="margin-top: 100px; margin-left: 70px">
+  <div class="row">
+    <div class="col">
+      <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Add Videos</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <form>
+    <div class="row g-3 align-items-center">
+      <div class="col-auto">
+        <label for="inputPassword6" class="col-form-label">Category:</label>
+      </div>
+      <div class="col-auto" style="width: 60%">
+        <input
+          type="text"
+          id="inputPassword6"
+          class="form-control"
+          aria-describedby="passwordHelpInline"
+        />
+      </div>
+    </div>
+
+    <div class="row g-3 align-items-center mt-3">
+      <div class="col-auto" style="padding-left: 40px">
+        <label for="inputPassword6" class="col-form-label">Title:</label>
+      </div>
+      <div class="col-auto" style="width: 60%">
+        <input
+          type="text"
+          id="inputPassword6"
+          class="form-control"
+          aria-describedby="passwordHelpInline"
+        />
+      </div>
+    </div>
+
+    <div class="row g-3 align-items-center mt-3">
+      <div class="col-auto" style="padding-left: 40px">
+        <label for="inputPassword6" class="col-form-label">Link:</label>
+      </div>
+      <div class="col-auto" style="width: 60%">
+        <input
+          type="text"
+          id="inputPassword6"
+          class="form-control"
+          aria-describedby="passwordHelpInline"
+        />
+      </div>
+    </div>
+
+    <div class="row g-3 align-items-center mt-3">
+      <div class="col-auto" style="padding-left: 32px">
+        <label for="inputPassword6" class="col-form-label">Body:</label>
+      </div>
+      <div class="col-auto form-group">
+        <div class="addMessage form-outline">
+          <textarea class="form-control" id="form6Example7" rows="4"></textarea>
+          <label class="form-label" for="form6Example7"
+            >Additional information</label
+          >
+        </div>
+        <div>
+          <button type="button" class="btn btn-primary mt-3">Add</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</main>
+<!--Main layout-->
+
+<!-- Include footer -->
+<%- include('../include/_footer')%>
+<!-- Include footer -->
