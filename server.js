@@ -10,8 +10,6 @@ const PORT = 3000 || 8080;
 //log requests
 app.use(morgan("tiny"));
 
-
-
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -25,11 +23,13 @@ app.set("views", "views");
 app.use("/css", express.static(path.resolve(__dirname, "assets/css")));
 app.use("/img", express.static(path.resolve(__dirname, "assets/img")));
 app.use("/js", express.static(path.resolve(__dirname, "assets/js")));
-mongoose.connect("mongodb://localhost/login", {
+mongoose
+  .connect("mongodb://localhost/login", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-  }).then(areed => {
-    console.log("MongoDB is connected");
+  })
+  .then((areed) => {
+    console.log("MongoDB is successfully connected.");
   });
 
 //load routers
