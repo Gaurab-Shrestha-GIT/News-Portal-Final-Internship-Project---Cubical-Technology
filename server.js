@@ -29,7 +29,7 @@ mongoose
     useUnifiedTopology: true,
   })
   .then((areed) => {
-    console.log("MongoDB is successfully connected.");
+    console.log("MongoDB is connected.");
   });
 
 //load routers
